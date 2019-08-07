@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Panel.gd" type="Script" id=1]
+
+[node name="Game" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+margin_top = 0.332886
+margin_right = 1024.0
+margin_bottom = 599.333
+script = ExtResource( 1 )
+
+[node name="Cash" type="Label" parent="Panel"]
+margin_left = 11.7597
+margin_top = 12.4459
+margin_right = 201.76
+margin_bottom = 58.4459
+text = "Cash: $[250]"
+valign = 1
+
+[node name="Firm" type="Label" parent="Panel"]
+margin_left = 181.932
+margin_top = 10.5835
+margin_right = 369.932
+margin_bottom = 61.5835
+text = "[FirmName]"
+align = 1
+valign = 1
+
+[node name="City" type="Label" parent="Panel"]
+margin_left = 10.6521
+margin_top = 50.2648
+margin_right = 161.652
+margin_bottom = 82.2648
+text = "City: [Hong Kong]"
+
+[node name="Shangai" type="Button" parent="Panel"]
+margin_left = 13.9809
+margin_top = 85.2171
+margin_right = 141.981
+margin_bottom = 113.217
+text = "Shangai"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Nagasaki" type="Button" parent="Panel"]
+margin_left = 174.096
+margin_top = 85.2171
+margin_right = 302.096
+margin_bottom = 113.217
+text = "Nagasaki"
+__meta__ = {
+"_edit_lock_": true
+}
+[connection signal="pressed" from="Panel/Shangai" to="Panel" method="_on_Shangai_pressed"]
+[connection signal="pressed" from="Panel/Nagasaki" to="Panel" method="_on_Nagasaki_pressed"]
